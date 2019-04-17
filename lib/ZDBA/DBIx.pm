@@ -80,8 +80,7 @@ sub _fetch {
 
   my $result = $self->dbh->$method(
     $args->{query},
-    $args->{options},
-    @{ $args->{bind_values} }
+    $args->{options}
   );
 
   my $end = [gettimeofday];
